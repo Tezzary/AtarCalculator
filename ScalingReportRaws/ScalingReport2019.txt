@@ -1,0 +1,113 @@
+AC Accounting 30.3 7.4 19 25 30 36 41 46 50
+AH Agricultural & Horticultural Studies 25.1 6.7 14 18 23 28 34 41 50
+AL03 Algorithmics (HESS) 36.3 7.0 24 31 38 42 46 49 50
+AT Art 27.3 7.4 15 20 26 32 38 45 50
+BI Biology 30.4 7.3 20 25 30 36 41 46 50
+BM Business Management 26.9 7.3 16 21 26 32 38 44 50
+CH Chemistry 33.7 7.2 22 28 34 39 44 47 50
+CC Classical Studies 29.9 7.5 18 24 30 35 41 46 50
+IT02 Informatics 26.0 6.7 15 20 25 30 36 42 50
+IT03 Software Development 28.3 7.1 16 21 27 33 39 45 50
+DA Dance 28.7 7.2 19 23 29 34 39 44 50
+DR Drama 27.6 7.4 17 22 27 33 38 44 50
+EC Economics 32.0 7.2 21 27 32 37 42 47 50
+EN English 28.1 7.5 17 22 28 33 39 45 50
+EF English (EAL) 28.8 8.1 17 23 29 35 41 46 50
+EG English Language 32.4 7.2 22 27 33 38 42 47 50
+EV Environmental Science 27.9 7.1 17 22 28 33 39 44 50
+XI03 Extended Investigation 31.6 7.4 20 26 31 37 42 46 50
+FT Food Studies 23.9 7.3 14 18 23 29 35 42 50
+GE Geography 28.8 7.1 18 23 28 34 39 45 50
+HH Health and Human Development 26.3 7.3 16 21 26 31 37 43 50
+HI17 Ancient History 28.0 8.5 16 22 28 35 41 46 50
+HA Australian History 28.7 7.4 18 23 28 34 39 45 50
+HR Revolutions 28.9 7.8 17 23 29 34 40 46 50
+IE Industry and Enterprise 23.0 7.9 10 14 20 26 33 42 50
+AR Arabic 31.1 6.8 19 25 30 35 40 45 50
+AM Armenian Small Study or no candidates, see Note below
+AU Auslan 28.8 7.3 17 23 29 34 40 45 50
+LO50 Bosnian Small Study or no candidates, see Note below
+LO53 Chin Hakha 31.2 6.1 20 24 27 31 36 41 50
+CN Chinese First Language 34.5 8.0 21 28 34 40 45 49 50
+LO57 Chinese Language Culture and Society 31.9 7.1 21 27 33 38 43 47 50
+CK Chinese Second Language Advanced 37.9 7.6 25 32 38 44 48 51 53
+CL Chinese Second Language 39.9 6.7 30 36 41 45 49 51 53
+AG Classical Greek 35.3 7.0 27 32 37 41 45 48 50
+LO51 Classical Hebrew Small Study or no candidates, see Note below
+CR Croatian 32.0 8.4 17 23 30 36 42 47 50
+DU Dutch Small Study or no candidates, see Note below
+FP Filipino 33.3 6.1 22 26 30 34 38 43 50
+FR French 40.1 6.7 29 36 41 45 49 52 53
+GN German 38.7 6.6 28 34 39 44 47 50 52
+MG Greek 34.6 6.7 24 30 35 39 44 47 50
+HB Hebrew 40.6 7.3 30 38 44 49 52 54 55
+HI Hindi 35.9 8.9 22 29 37 43 48 52 54
+HU Hungarian Small Study or no candidates, see Note below
+AI Indigenous Languages Small Study or no candidates, see Note below
+IN Indonesian First Language Small Study or no candidates, see Note below
+IX Indonesian Second Language 36.0 6.8 25 31 37 41 45 48 50
+IL Italian 35.7 6.3 26 31 36 41 44 47 50
+JA Japanese First Language Small Study or no candidates, see Note below
+JS Japanese Second Language 37.4 6.8 27 33 38 43 46 49 51
+LO55 Karen Small Study or no candidates, see Note below
+KH Khmer 30.0 7.6 18 24 30 36 41 46 50
+KO Korean First Language Small Study or no candidates, see Note below
+KS Korean Second Language 38.4 6.7 30 36 40 44 47 50 52
+LA Latin 45.0 6.9 34 41 46 50 53 54 55
+MA Macedonian 32.4 5.8 23 27 31 35 40 44 50
+ML Maltese Small Study or no candidates, see Note below
+PN Persian 28.7 7.4 18 23 28 33 39 44 50
+PO Polish 34.4 5.8 22 28 33 38 43 47 50
+PG Portuguese 30.6 6.7 21 25 29 33 38 43 50
+LO49 Punjabi 32.0 6.2 22 27 32 37 41 46 50
+RO Romanian Small Study or no candidates, see Note below
+RU Russian 36.2 6.9 27 33 39 43 46 49 50
+SE Serbian 31.1 5.7 20 27 34 40 45 48 50
+SI Sinhala 36.1 6.4 27 32 35 39 42 46 50
+SP Spanish 36.0 6.7 22 30 38 43 47 49 50
+SW Swedish Small Study or no candidates, see Note below
+TA Tamil Small Study or no candidates, see Note below
+TU Turkish 29.4 7.2 19 23 28 32 37 43 50
+LO54 Vietnamese First Language 32.9 6.8 22 27 33 37 42 46 50
+VT Vietnamese Second Language 35.5 6.9 24 30 36 40 44 48 50
+LO52 Yiddish Small Study or no candidates, see Note below
+LS Legal Studies 28.3 7.6 17 22 28 34 39 45 50
+LI Literature 31.2 7.3 20 26 31 36 41 46 50
+NF Further Mathematics 27.8 7.1 18 23 27 33 38 44 50
+NJ Mathematical Methods 33.7 8.4 21 28 34 40 45 49 50
+NS Specialist Mathematics 40.1 8.3 27 34 41 47 51 54 55
+ME Media 26.6 7.3 15 20 25 31 37 44 50
+MC05 Music Investigation 30.4 7.1 21 25 29 33 37 42 50
+MC04 Music Performance 29.6 7.2 19 24 29 35 40 45 50
+MD Music Style and Composition 31.3 7.2 19 25 30 36 41 46 50
+OS Outdoor and Environmental Studies 24.9 7.1 15 19 24 29 35 42 50
+PL Philosophy 29.8 7.7 18 24 30 35 41 46 50
+PE Physical Education 27.3 7.3 17 22 27 32 38 44 50
+PH Physics 32.0 7.4 21 26 32 38 42 47 50
+PS03 Australian Politics 31.8 7.5 20 26 32 38 43 47 50
+PS05 Global Politics 31.9 7.5 20 26 32 37 42 47 50
+DT Product Design and Technology 24.5 7.0 12 17 22 28 35 42 50
+PY Psychology 28.4 7.3 18 23 28 34 39 45 50
+RS Religion and Society 29.3 7.3 18 23 28 34 39 45 50
+SO03 Sociology 24.8 7.7 14 19 24 30 37 44 50
+SA Studio Arts 26.2 7.5 14 19 25 31 37 44 50
+SE03 Systems Engineering 26.3 6.6 15 20 25 30 36 42 50
+TT Texts and Traditions 30.4 7.0 20 25 30 35 40 45 50
+TS Theatre Studies 29.0 7.2 19 24 29 34 39 45 50
+VC Visual Communication Design 27.0 7.0 16 20 26 32 38 44 50
+BU23 VCE VET Business 24.5 7.2 14 18 23 29 35 42 50
+CT41 VCE VET Community Services 23.7 6.5 14 18 23 28 34 41 50
+MU07 VCE VET Creative and Digital Media 25.9 6.8 16 20 25 30 35 42 50
+DN06 VCE VET Dance 27.6 6.4 19 22 26 30 35 41 50
+EG16 VCE VET Engineering Studies 24.2 6.2 15 19 23 28 34 41 50
+EQ05 VCE VET Equine Studies 28.2 7.0 17 22 27 32 38 43 50
+FN19 VCE VET Furnishing 24.4 5.4 19 22 26 30 35 41 50
+CT37 VCE VET Health Services 24.9 7.1 14 19 24 29 35 42 50
+HS31 VCE VET Hospitality 25.6 7.1 15 20 25 30 36 43 50
+HS32 VCE VET Hospitality (Kitchen Operations) 24.9 6.7 15 19 24 28 34 41 50
+IN60 VCE VET Information Technology 25.0 5.8 18 22 25 30 35 40 50
+ET16 VCE VET Integrated Technologies 22.2 5.9 16 20 24 29 34 40 50
+LB21 VCE VET Laboratory Skills 29.3 6.4 19 24 28 33 38 43 50
+MI19 VCE VET Music Performance 26.6 6.3 17 21 26 30 35 41 50
+MI30 VCE VET Music Sound Production 26.3 6.2 17 21 25 30 35 41 50
+SR41 VCE VET Sport and Recreation 23.9 6.8 14 18 23 28 33 40 50

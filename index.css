@@ -1,0 +1,26 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    background-color: red;
+    width: 1200px;
+    padding: 10px;
+    grid-gap: 10px;
+    border-radius: 10px;
+}
+.dropdown{
+    position: absolute;
+    height: 200px;
+    width:300px;
+    overflow: scroll;
+    background-color: blue;
+}

@@ -1083,6 +1083,22 @@
         {
             "hasScalingData": true,
             "subjectID": "NF",
+            "subjectName": "General Mathematics",
+            "subjectMean": 27.8,
+            "subjectSD": 7.1,
+            "subjectScalingData": [
+                18,
+                23,
+                27,
+                33,
+                38,
+                44,
+                50
+            ]
+        },
+        {
+            "hasScalingData": true,
+            "subjectID": "NF",
             "subjectName": "Further Mathematics",
             "subjectMean": 27.8,
             "subjectSD": 7.1,
@@ -2766,6 +2782,22 @@
             "hasScalingData": true,
             "subjectID": "NF",
             "subjectName": "Further Mathematics",
+            "subjectMean": 27.6,
+            "subjectSD": 7.2,
+            "subjectScalingData": [
+                18,
+                22,
+                27,
+                33,
+                38,
+                44,
+                50
+            ]
+        },
+        {
+            "hasScalingData": true,
+            "subjectID": "NF",
+            "subjectName": "General Mathematics",
             "subjectMean": 27.6,
             "subjectSD": 7.2,
             "subjectScalingData": [
@@ -4470,6 +4502,22 @@
         },
         {
             "hasScalingData": true,
+            "subjectID": "NF",
+            "subjectName": "General Mathematics",
+            "subjectMean": 27.6,
+            "subjectSD": 7.2,
+            "subjectScalingData": [
+                17,
+                22,
+                27,
+                33,
+                38,
+                44,
+                50
+            ]
+        },
+        {
+            "hasScalingData": true,
             "subjectID": "NJ",
             "subjectName": "Mathematical Methods",
             "subjectMean": 33.7,
@@ -6138,6 +6186,22 @@
             "hasScalingData": true,
             "subjectID": "NF",
             "subjectName": "Further Mathematics",
+            "subjectMean": 27.5,
+            "subjectSD": 7.2,
+            "subjectScalingData": [
+                17,
+                22,
+                27,
+                33,
+                38,
+                44,
+                50
+            ]
+        },
+        {
+            "hasScalingData": true,
+            "subjectID": "NF",
+            "subjectName": "General Mathematics",
             "subjectMean": 27.5,
             "subjectSD": 7.2,
             "subjectScalingData": [
@@ -7828,6 +7892,22 @@
             "hasScalingData": true,
             "subjectID": "NF",
             "subjectName": "General Mathematics",
+            "subjectMean": 27.7,
+            "subjectSD": 7.2,
+            "subjectScalingData": [
+                18,
+                22,
+                27,
+                33,
+                38,
+                44,
+                50
+            ]
+        },
+        {
+            "hasScalingData": true,
+            "subjectID": "NF",
+            "subjectName": "Further Mathematics",
             "subjectMean": 27.7,
             "subjectSD": 7.2,
             "subjectScalingData": [

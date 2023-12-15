@@ -14,7 +14,7 @@ let subjects = []
 class Subject{
     constructor(){
         this.cells = []
-        this.rawScore = 0
+        this.rawScore = 30
         this.scaledSS = []
     }
 }
@@ -59,7 +59,8 @@ function handleTyping(text, input, subjectObj){
     }
     if(perfectMatch){
         input.value = perfectMatch.subjectName
-
+        subjectObj.subject = perfectMatch
+        updateScaledScores(subjectObj)
         return
     }
     activateDropDown(input.parentElement)
@@ -76,13 +77,17 @@ function handleTyping(text, input, subjectObj){
     }
 }
 function updateScaledScores(subjectObj){
+    if (subjectObj.subject == undefined){
+        return
+    }
     for(let i = 2; i < subjectObj.cells.length; i++){
         let cell = subjectObj.cells[i]
         let year = 2019 + i - 2
         let subject = scalingReport[year].find(subject => subject.subjectName == subjectObj.subject.subjectName)
         let baseline = [20, 25, 30, 35, 40, 45, 50]
         for(let j = 0; j < baseline.length; j++){
-            if(subjectObj.rawScore <= subject.subjectScalingData[j]){
+            if(subjectObj.rawScore <= baseline[j]){
+
                 if (j == 0){
                     cell.innerText = subjectObj.rawScore - (baseline[j] - subject.subjectScalingData[j])
                     break
@@ -90,7 +95,11 @@ function updateScaledScores(subjectObj){
                 let offset = subjectObj.rawScore - baseline[j - 1]
                 let diff = baseline[j] - baseline[j - 1]
                 let percent = offset / diff
+                console.log(percent)
                 let scaledSS = subject.subjectScalingData[j - 1] + percent * (subject.subjectScalingData[j] - subject.subjectScalingData[j - 1])
+                if (scaledSS < 0){
+                    scaledSS = 0
+                }
                 cell.innerText = scaledSS
                 break
             }

@@ -24,3 +24,10 @@ body {
     overflow: scroll;
     background-color: blue;
 }
+.dropdown > div{
+    cursor: pointer;
+}
+
+.cell{
+    text-align: center;
+}

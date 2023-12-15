@@ -14,7 +14,7 @@ let subjects = []
 class Subject{
     constructor(){
         this.cells = []
-        this.rawScore = 30
+        this.rawScore = 0
         this.scaledSS = []
     }
 }
@@ -89,7 +89,11 @@ function updateScaledScores(subjectObj){
             if(subjectObj.rawScore <= baseline[j]){
 
                 if (j == 0){
-                    cell.innerText = subjectObj.rawScore - (baseline[j] - subject.subjectScalingData[j])
+                    let scaledSS = subjectObj.rawScore - (baseline[j] - subject.subjectScalingData[j])
+                    if (scaledSS < 0){
+                        scaledSS = 0
+                    }
+                    cell.innerText = scaledSS
                     break
                 }
                 let offset = subjectObj.rawScore - baseline[j - 1]
@@ -143,7 +147,7 @@ function handleColumn(index, cell, subjectObj){
             rangeField.type = "number"
             rangeField.min = 0
             rangeField.max = 50
-            rangeField.value = 30
+            rangeField.value = 0
             rangeField.addEventListener("input", (event) => {
                 subjectObj.rawScore = event.target.value
                 updateScaledScores(subjectObj)
@@ -151,7 +155,7 @@ function handleColumn(index, cell, subjectObj){
             cell.appendChild(rangeField)
             break
         default:
-            cell.innerText = Math.random()
+            cell.innerText = "-"
     }
 
 }

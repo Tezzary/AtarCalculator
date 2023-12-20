@@ -12,7 +12,7 @@ DA Dance 28.6 6.8 19 24 28 33 39 44 50
 DR Drama 28.2 7.0 18 23 28 33 38 44 50
 EC Economics 31.6 7.1 21 26 32 37 42 46 50
 EN English 28.1 7.6 17 22 28 34 39 45 50
-EF English (EAL) 28.7 8.1 17 22 28 34 40 46 50
+EF English as an Additional Language 28.7 8.1 17 22 28 34 40 46 50
 EG English Language 32.2 7.3 21 27 32 38 42 47 50
 EV Environmental Science 27.6 7.3 17 22 27 33 38 44 50
 XI03 Extended Investigation 33.0 6.9 21 27 33 38 43 47 50

@@ -227,7 +227,7 @@
         {
             "hasScalingData": true,
             "subjectID": "EF",
-            "subjectName": "English (EAL)",
+            "subjectName": "English as an Additional Language",
             "subjectMean": 28.8,
             "subjectSD": 8.1,
             "subjectScalingData": [
@@ -1933,7 +1933,7 @@
         {
             "hasScalingData": true,
             "subjectID": "EF",
-            "subjectName": "English (EAL)",
+            "subjectName": "English as an Additional Language",
             "subjectMean": 28.7,
             "subjectSD": 8.1,
             "subjectScalingData": [
@@ -3631,7 +3631,7 @@
         {
             "hasScalingData": true,
             "subjectID": "EF",
-            "subjectName": "English (EAL)",
+            "subjectName": "English as an Additional Language",
             "subjectMean": 28.4,
             "subjectSD": 8.1,
             "subjectScalingData": [
@@ -5337,7 +5337,7 @@
         {
             "hasScalingData": true,
             "subjectID": "EF",
-            "subjectName": "English (EAL)",
+            "subjectName": "English as an Additional Language",
             "subjectMean": 28.1,
             "subjectSD": 8.4,
             "subjectScalingData": [

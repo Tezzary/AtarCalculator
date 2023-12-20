@@ -12,18 +12,22 @@ let dropdown = undefined
 let subjects = []
 
 class Subject{
-    constructor(){
+    constructor(compulsoryEnglish=false){
         this.cells = []
         this.rawScore = 0
         this.scaledSS = []
+        this.compulsoryEnglish = compulsoryEnglish
     }
 }
-function getValidSubjects(text){
+function getValidSubjects(text, englishOnly=false){
     let yearSubjects = scalingReport["2023"]
 
     let validSubjects = []
     for(let i = 0; i < yearSubjects.length; i++){
         let subject = yearSubjects[i]
+        if(englishOnly && !(subject.subjectName.toLowerCase().includes("english") || subject.subjectName.toLowerCase().includes("literature"))){
+            continue
+        }
         if(subject.subjectName.toLowerCase().includes(text.toLowerCase())){
             validSubjects.push(subject)
         }
@@ -48,7 +52,7 @@ function activateDropDown(parent){
     parent.appendChild(dropdown)
 }
 function handleTyping(text, input, subjectObj){
-    let validSubjects = getValidSubjects(text)
+    let validSubjects = getValidSubjects(text, subjectObj.compulsoryEnglish)
     let perfectMatch = undefined
     for(let i = 0; i < validSubjects.length; i++){
         let subject = validSubjects[i]
@@ -120,7 +124,7 @@ function handleTextActivation(event, subjectObj){
     let input = event.target
     let parent = input.parentElement
     activateDropDown(parent)
-    let validSubjects = getValidSubjects(input.value)
+    let validSubjects = getValidSubjects(input.value, subjectObj.compulsoryEnglish)
     for(let i = 0; i < validSubjects.length; i++){
         let subject = validSubjects[i]
         addDropDownItem(subject.subjectName, (event) => {
@@ -159,11 +163,11 @@ function handleColumn(index, cell, subjectObj){
     }
 
 }
-function addRow(){
+function addRow(compulsoryEnglish){
     //let row = document.createElement("div")
     //row.classList.add("row")
     rows.push([])
-    let subjectObj = new Subject()
+    let subjectObj = new Subject(compulsoryEnglish)
     subjects.push(subjectObj)
     for (let i = 0; i < elementsPerRow; i++) {
         
@@ -186,7 +190,7 @@ function addHeader(headers){
 }
 addHeader(["", "Raw Score", "2019 Scaled SS", "2020 Scaled SS", "2021 Scaled SS", "2022 Scaled SS", "2023 Scaled SS"])
 for (let i = 0; i < 6; i++) {
-    addRow()
+    addRow(i==0)
 }
 
 fetch("/ScalingReport.json").then((response) => response.json()).then((data) => {

@@ -3,6 +3,7 @@ let container = document.getElementById("container")
 let elementsPerRow = 7 
 
 let scalingReport = undefined
+let aggregateToAtar = undefined
 
 rows = []
 
@@ -12,7 +13,9 @@ let dropdown = undefined
 let subjects = []
 
 let aggregateRowCells = []
+let atarRowCells = []
 
+let startingYear = 2019
 class Subject{
     constructor(compulsoryEnglish=false){
         this.cells = []
@@ -90,7 +93,7 @@ function populatePage(){
         subjectObj.scaledSS = []
         for(let i = 2; i < subjectObj.cells.length; i++){
             let cell = subjectObj.cells[i]
-            let year = 2019 + i - 2
+            let year = startingYear + i - 2
             let subject = scalingReport[year].find(subject => subject.subjectName == subjectObj.subject.subjectName)
             let baseline = [20, 25, 30, 35, 40, 45, 50]
             for(let j = 0; j < baseline.length; j++){
@@ -102,6 +105,7 @@ function populatePage(){
                             scaledSS = 0
                         }
                         cell.innerText = scaledSS
+                        subjectObj.scaledSS.push(scaledSS)
                         break
                     }
                     let offset = subjectObj.rawScore - baseline[j - 1]
@@ -119,18 +123,53 @@ function populatePage(){
             }
         }
     }
+    if(subjects[0].subject == undefined){
+        return
+    }
     for(let i = 0; i < aggregateRowCells.length; i++){
         let cell = aggregateRowCells[i]
-        let sum = 0
-        for(let j = 0; j < subjects.length; j++){
+        
+        let sum = subjects[0].scaledSS[i]
+        let scaledStudyScores = []
+        for(let j = 1; j < subjects.length; j++){
             let subjectObj = subjects[j]
             if(subjectObj.subject == undefined){
                 continue
             }
             let scaledSS = subjectObj.scaledSS[i]
-            sum += scaledSS
+            scaledStudyScores.push(scaledSS)
         }
-        cell.innerText = sum
+        //sorts ascending which we want descending so we do b - a
+        scaledStudyScores.sort((a, b) => b - a)
+        fullStudyScoresCounted = 1
+        for(let j = 0; j < scaledStudyScores.length; j++){
+            if(fullStudyScoresCounted == 4){
+                sum += scaledStudyScores[j] / 10
+            }
+            else{
+                sum += scaledStudyScores[j]
+                fullStudyScoresCounted += 1
+            }
+        }
+        cell.innerText = sum.toFixed(2)
+
+        cell = atarRowCells[i]
+        year = startingYear + i
+
+        let incrementsPassed = -1
+        for(let j = 0; j < aggregateToAtar[year].length; j++){
+            let minimumRequired = aggregateToAtar[year][aggregateToAtar[year].length - 1 - j]
+            console.log(minimumRequired, sum)
+            if(parseFloat(minimumRequired) <= sum){
+                incrementsPassed = j
+            }
+        }
+        if(incrementsPassed == -1){
+            cell.innerText = "<30"
+        }
+        else {
+            cell.innerText = (30 + 0.05 * incrementsPassed).toFixed(2)
+        }
     }
     
 }
@@ -176,6 +215,9 @@ function createSubjectCell(columnIndex, cell, subjectObj){
             rangeField.value = 30
             rangeField.addEventListener("input", (event) => {
                 subjectObj.rawScore = event.target.value
+                if(subjectObj.rawScore == ""){
+                    subjectObj.rawScore = 0
+                }
                 populatePage()
             })
             cell.appendChild(rangeField)
@@ -226,15 +268,33 @@ function addAggregateRow(){
         }  
     }
 }
+function addAtarEstimateRow(){
+    for(let i = 0; i < elementsPerRow; i++){
+        let cell = document.createElement("div")
+        cell.classList.add("cell")
+        if(i==1){
+            cell.innerText = "ATAR"
+        }
+        container.appendChild(cell)
+        if(i > 1){
+            atarRowCells.push(cell)
+        }  
+    }
+
+}
 addStaticRow(["", "Raw Score", "2019 Scaled SS", "2020 Scaled SS", "2021 Scaled SS", "2022 Scaled SS", "2023 Scaled SS"])
 for (let i = 0; i < 6; i++) {
     //first row is compulsory english so i==0 is true for first column
     addSubjectRow(i==0)
 }
 addAggregateRow()
+addAtarEstimateRow()
 
 fetch("/ScalingReport.json").then((response) => response.json()).then((data) => {
     scalingReport = data
+})
+fetch("/AggregateToAtar.json").then((response) => response.json()).then((data) => {
+    aggregateToAtar = data
 })
 
 document.addEventListener("click", (event) => {

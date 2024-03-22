@@ -1,0 +1,7 @@
+//Scaling Reports
+Manually delete any bad lines
+Duplicate further gerneral math idk what else
+run scaling reportstojson.py file
+
+//Aggregate to Atar 
+Copy paste pdf text to raw file and place thru aggregatetoatat.py this manages everything automatically into the json for the site

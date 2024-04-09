@@ -74,7 +74,7 @@ LO52 Yiddish Small Study or no candidates, see Note below
 LS Legal Studies 28.3 7.6 17 22 28 34 39 45 50
 LI Literature 31.2 7.3 20 26 31 36 41 46 50
 NF General Mathematics 27.8 7.1 18 23 27 33 38 44 50
-NF Further Mathematics 27.8 7.1 18 23 27 33 38 44 50
+MF Further Mathematics 27.8 7.1 18 23 27 33 38 44 50
 NJ Mathematical Methods 33.7 8.4 21 28 34 40 45 49 50
 NS Specialist Mathematics 40.1 8.3 27 34 41 47 51 54 55
 ME Media 26.6 7.3 15 20 25 31 37 44 50

@@ -290,10 +290,10 @@ for (let i = 0; i < 6; i++) {
 addAggregateRow()
 addAtarEstimateRow()
 
-fetch("ScalingReport.min.json").then((response) => response.json()).then((data) => {
+fetch("jsons/ScalingReport.min.json").then((response) => response.json()).then((data) => {
     scalingReport = data
 })
-fetch("AggregateToAtar.min.json").then((response) => response.json()).then((data) => {
+fetch("jsons/AggregateToAtar.min.json").then((response) => response.json()).then((data) => {
     aggregateToAtar = data
 })
 

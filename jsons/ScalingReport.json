@@ -371,7 +371,7 @@
         {
             "hasScalingData": true,
             "subjectID": "HR",
-            "subjectName": "Revolutions",
+            "subjectName": "Revolutions (History)",
             "subjectMean": 28.9,
             "subjectSD": 7.8,
             "subjectScalingData": [
@@ -1098,7 +1098,7 @@
         },
         {
             "hasScalingData": true,
-            "subjectID": "NF",
+            "subjectID": "MF",
             "subjectName": "Further Mathematics",
             "subjectMean": 27.8,
             "subjectSD": 7.1,
@@ -1703,6 +1703,110 @@
                 40,
                 50
             ]
+        },
+        {
+            "hasScalingData": true,
+            "subjectID": "AT",
+            "subjectName": "Art Creative Practice",
+            "subjectMean": 27.3,
+            "subjectSD": 7.4,
+            "subjectScalingData": [
+                15,
+                20,
+                26,
+                32,
+                38,
+                45,
+                50
+            ]
+        },
+        {
+            "hasScalingData": true,
+            "subjectID": "IT02",
+            "subjectName": "Data Analytics",
+            "subjectMean": 26.0,
+            "subjectSD": 6.7,
+            "subjectScalingData": [
+                15,
+                20,
+                25,
+                30,
+                36,
+                42,
+                50
+            ]
+        },
+        {
+            "hasScalingData": false,
+            "subjectID": "AI",
+            "subjectName": "Aboriginal Languages",
+            "subjectMean": 0,
+            "subjectSD": 0,
+            "subjectScalingData": []
+        },
+        {
+            "hasScalingData": true,
+            "subjectID": "MC05",
+            "subjectName": "Music Inquiry",
+            "subjectMean": 30.4,
+            "subjectSD": 7.1,
+            "subjectScalingData": [
+                21,
+                25,
+                29,
+                33,
+                37,
+                42,
+                50
+            ]
+        },
+        {
+            "hasScalingData": true,
+            "subjectID": "MC04",
+            "subjectName": "Music Repertoire Performance",
+            "subjectMean": 29.6,
+            "subjectSD": 7.2,
+            "subjectScalingData": [
+                19,
+                24,
+                29,
+                35,
+                40,
+                45,
+                50
+            ]
+        },
+        {
+            "hasScalingData": true,
+            "subjectID": "MD",
+            "subjectName": "Music Composition",
+            "subjectMean": 31.3,
+            "subjectSD": 7.2,
+            "subjectScalingData": [
+                19,
+                25,
+                30,
+                36,
+                41,
+                46,
+                50
+            ]
+        },
+        {
+            "hasScalingData": true,
+            "subjectID": "SA",
+            "subjectName": "Art Making and Exhibiting",
+            "subjectMean": 26.2,
+            "subjectSD": 7.5,
+            "subjectScalingData": [
+                14,
+                19,
+                25,
+                31,
+                37,
+                44,
+                50
+            ]
         }
     ],
     "2020": [
@@ -2077,7 +2181,7 @@
         {
             "hasScalingData": true,
             "subjectID": "HR",
-            "subjectName": "Revolutions",
+            "subjectName": "Revolutions (History)",
             "subjectMean": 28.9,
             "subjectSD": 7.8,
             "subjectScalingData": [
@@ -2780,7 +2884,7 @@
         },
         {
             "hasScalingData": true,
-            "subjectID": "NF",
+            "subjectID": "MF",
             "subjectName": "Further Mathematics",
             "subjectMean": 27.6,
             "subjectSD": 7.2,
@@ -3401,6 +3505,110 @@
                 40,
                 50
             ]
+        },
+        {
+            "hasScalingData": true,
+            "subjectID": "IT02",
+            "subjectName": "Informatics",
+            "subjectMean": 26.3,
+            "subjectSD": 7.1,
+            "subjectScalingData": [
+                15,
+                20,
+                25,
+                31,
+                37,
+                43,
+                50
+            ]
+        },
+        {
+            "hasScalingData": true,
+            "subjectID": "AT",
+            "subjectName": "Art Creative Practice",
+            "subjectMean": 27.2,
+            "subjectSD": 7.5,
+            "subjectScalingData": [
+                16,
+                21,
+                26,
+                32,
+                38,
+                44,
+                50
+            ]
+        },
+        {
+            "hasScalingData": false,
+            "subjectID": "AI",
+            "subjectName": "Aboriginal Languages",
+            "subjectMean": 0,
+            "subjectSD": 0,
+            "subjectScalingData": []
+        },
+        {
+            "hasScalingData": true,
+            "subjectID": "MC05",
+            "subjectName": "Music Inquiry",
+            "subjectMean": 29.6,
+            "subjectSD": 7.6,
+            "subjectScalingData": [
+                20,
+                24,
+                27,
+                31,
+                36,
+                41,
+                50
+            ]
+        },
+        {
+            "hasScalingData": true,
+            "subjectID": "MC04",
+            "subjectName": "Music Repertoire Performance",
+            "subjectMean": 29.4,
+            "subjectSD": 7.0,
+            "subjectScalingData": [
+                19,
+                24,
+                29,
+                34,
+                39,
+                45,
+                50
+            ]
+        },
+        {
+            "hasScalingData": true,
+            "subjectID": "MD",
+            "subjectName": "Music Composition",
+            "subjectMean": 31.0,
+            "subjectSD": 6.8,
+            "subjectScalingData": [
+                20,
+                25,
+                31,
+                36,
+                41,
+                46,
+                50
+            ]
+        },
+        {
+            "hasScalingData": true,
+            "subjectID": "SA",
+            "subjectName": "Art Making and Exhibiting",
+            "subjectMean": 26.4,
+            "subjectSD": 7.4,
+            "subjectScalingData": [
+                15,
+                20,
+                25,
+                31,
+                37,
+                44,
+                50
+            ]
         }
     ],
     "2021": [
@@ -3775,7 +3983,7 @@
         {
             "hasScalingData": true,
             "subjectID": "HR",
-            "subjectName": "Revolutions",
+            "subjectName": "Revolutions (History)",
             "subjectMean": 28.8,
             "subjectSD": 7.7,
             "subjectScalingData": [
@@ -4486,7 +4694,7 @@
         },
         {
             "hasScalingData": true,
-            "subjectID": "NF",
+            "subjectID": "MF",
             "subjectName": "Further Mathematics",
             "subjectMean": 27.6,
             "subjectSD": 7.2,
@@ -5107,6 +5315,110 @@
                 41,
                 50
             ]
+        },
+        {
+            "hasScalingData": true,
+            "subjectID": "IT02",
+            "subjectName": "Informatics",
+            "subjectMean": 26.5,
+            "subjectSD": 7.2,
+            "subjectScalingData": [
+                15,
+                20,
+                25,
+                31,
+                37,
+                43,
+                50
+            ]
+        },
+        {
+            "hasScalingData": true,
+            "subjectID": "AT",
+            "subjectName": "Art Creative Practice",
+            "subjectMean": 27.2,
+            "subjectSD": 7.5,
+            "subjectScalingData": [
+                15,
+                20,
+                26,
+                32,
+                39,
+                45,
+                50
+            ]
+        },
+        {
+            "hasScalingData": false,
+            "subjectID": "AI",
+            "subjectName": "Aboriginal Languages",
+            "subjectMean": 0,
+            "subjectSD": 0,
+            "subjectScalingData": []
+        },
+        {
+            "hasScalingData": true,
+            "subjectID": "MC05",
+            "subjectName": "Music Inquiry",
+            "subjectMean": 29.9,
+            "subjectSD": 7.2,
+            "subjectScalingData": [
+                20,
+                24,
+                28,
+                32,
+                36,
+                41,
+                50
+            ]
+        },
+        {
+            "hasScalingData": true,
+            "subjectID": "MC04",
+            "subjectName": "Music Repertoire Performance",
+            "subjectMean": 29.8,
+            "subjectSD": 7.2,
+            "subjectScalingData": [
+                19,
+                24,
+                30,
+                35,
+                40,
+                45,
+                50
+            ]
+        },
+        {
+            "hasScalingData": true,
+            "subjectID": "MD",
+            "subjectName": "Music Composition",
+            "subjectMean": 32.1,
+            "subjectSD": 7.0,
+            "subjectScalingData": [
+                20,
+                25,
+                31,
+                36,
+                42,
+                46,
+                50
+            ]
+        },
+        {
+            "hasScalingData": true,
+            "subjectID": "SA",
+            "subjectName": "Art Making and Exhibiting",
+            "subjectMean": 26.7,
+            "subjectSD": 7.4,
+            "subjectScalingData": [
+                15,
+                20,
+                25,
+                31,
+                38,
+                44,
+                50
+            ]
         }
     ],
     "2022": [
@@ -5481,7 +5793,7 @@
         {
             "hasScalingData": true,
             "subjectID": "HR",
-            "subjectName": "Revolutions",
+            "subjectName": "Revolutions (History)",
             "subjectMean": 28.8,
             "subjectSD": 7.7,
             "subjectScalingData": [
@@ -6184,7 +6496,7 @@
         },
         {
             "hasScalingData": true,
-            "subjectID": "NF",
+            "subjectID": "MF",
             "subjectName": "Further Mathematics",
             "subjectMean": 27.5,
             "subjectSD": 7.2,
@@ -6805,6 +7117,110 @@
                 40,
                 50
             ]
+        },
+        {
+            "hasScalingData": true,
+            "subjectID": "IT02",
+            "subjectName": "Informatics",
+            "subjectMean": 26.7,
+            "subjectSD": 6.9,
+            "subjectScalingData": [
+                16,
+                21,
+                26,
+                32,
+                38,
+                44,
+                50
+            ]
+        },
+        {
+            "hasScalingData": true,
+            "subjectID": "AT",
+            "subjectName": "Art Creative Practice",
+            "subjectMean": 27.3,
+            "subjectSD": 7.5,
+            "subjectScalingData": [
+                16,
+                21,
+                27,
+                32,
+                38,
+                44,
+                50
+            ]
+        },
+        {
+            "hasScalingData": false,
+            "subjectID": "AI",
+            "subjectName": "Aboriginal Languages",
+            "subjectMean": 0,
+            "subjectSD": 0,
+            "subjectScalingData": []
+        },
+        {
+            "hasScalingData": true,
+            "subjectID": "MC05",
+            "subjectName": "Music Inquiry",
+            "subjectMean": 29.8,
+            "subjectSD": 6.9,
+            "subjectScalingData": [
+                21,
+                25,
+                29,
+                33,
+                37,
+                42,
+                50
+            ]
+        },
+        {
+            "hasScalingData": true,
+            "subjectID": "MC04",
+            "subjectName": "Music Repertoire Performance",
+            "subjectMean": 29.7,
+            "subjectSD": 6.9,
+            "subjectScalingData": [
+                20,
+                24,
+                29,
+                34,
+                39,
+                45,
+                50
+            ]
+        },
+        {
+            "hasScalingData": true,
+            "subjectID": "MD",
+            "subjectName": "Music Composition",
+            "subjectMean": 30.5,
+            "subjectSD": 6.8,
+            "subjectScalingData": [
+                19,
+                25,
+                30,
+                35,
+                41,
+                46,
+                50
+            ]
+        },
+        {
+            "hasScalingData": true,
+            "subjectID": "SA",
+            "subjectName": "Art Making and Exhibiting",
+            "subjectMean": 26.6,
+            "subjectSD": 7.3,
+            "subjectScalingData": [
+                15,
+                20,
+                25,
+                31,
+                38,
+                44,
+                50
+            ]
         }
     ],
     "2023": [
@@ -7195,7 +7611,7 @@
         {
             "hasScalingData": true,
             "subjectID": "HR",
-            "subjectName": "Revolutions",
+            "subjectName": "Revolutions (History)",
             "subjectMean": 29.0,
             "subjectSD": 7.6,
             "subjectScalingData": [
@@ -7906,7 +8322,7 @@
         },
         {
             "hasScalingData": true,
-            "subjectID": "NF",
+            "subjectID": "MF",
             "subjectName": "Further Mathematics",
             "subjectMean": 27.7,
             "subjectSD": 7.2,
@@ -8509,6 +8925,118 @@
                 28,
                 33,
                 40,
+                50
+            ]
+        },
+        {
+            "hasScalingData": true,
+            "subjectID": "IT02",
+            "subjectName": "Informatics",
+            "subjectMean": 27.5,
+            "subjectSD": 7.5,
+            "subjectScalingData": [
+                16,
+                21,
+                26,
+                31,
+                37,
+                44,
+                50
+            ]
+        },
+        {
+            "hasScalingData": true,
+            "subjectID": "AT",
+            "subjectName": "Art",
+            "subjectMean": 27.4,
+            "subjectSD": 7.3,
+            "subjectScalingData": [
+                17,
+                22,
+                27,
+                33,
+                38,
+                44,
+                50
+            ]
+        },
+        {
+            "hasScalingData": true,
+            "subjectID": "SA",
+            "subjectName": "Studio Arts",
+            "subjectMean": 26.6,
+            "subjectSD": 7.3,
+            "subjectScalingData": [
+                15,
+                20,
+                25,
+                31,
+                37,
+                44,
+                50
+            ]
+        },
+        {
+            "hasScalingData": false,
+            "subjectID": "AI",
+            "subjectName": "Indigenous Languages",
+            "subjectMean": 0,
+            "subjectSD": 0,
+            "subjectScalingData": []
+        },
+        {
+            "hasScalingData": false,
+            "subjectID": "AI",
+            "subjectName": "Aboriginal Languages",
+            "subjectMean": 0,
+            "subjectSD": 0,
+            "subjectScalingData": []
+        },
+        {
+            "hasScalingData": true,
+            "subjectID": "MD",
+            "subjectName": "Music Style and Composition",
+            "subjectMean": 31.0,
+            "subjectSD": 7.0,
+            "subjectScalingData": [
+                19,
+                25,
+                31,
+                36,
+                41,
+                46,
+                50
+            ]
+        },
+        {
+            "hasScalingData": true,
+            "subjectID": "MC05",
+            "subjectName": "Music Investigation",
+            "subjectMean": 29.0,
+            "subjectSD": 7.7,
+            "subjectScalingData": [
+                17,
+                22,
+                27,
+                32,
+                38,
+                44,
+                50
+            ]
+        },
+        {
+            "hasScalingData": true,
+            "subjectID": "MC04",
+            "subjectName": "Music Performance",
+            "subjectMean": 31.8,
+            "subjectSD": 7.0,
+            "subjectScalingData": [
+                22,
+                27,
+                31,
+                36,
+                40,
+                45,
                 50
             ]
         }

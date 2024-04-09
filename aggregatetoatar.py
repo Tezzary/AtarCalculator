@@ -4,7 +4,8 @@ import os
 files = os.path.join(os.path.dirname(__file__), "AggregateToAtarRaws")
 filesPath = os.listdir(files)
 
-jsons_dir = os.path.join(os.path.dirname(__file__), "jsons")
+json_file_min = os.path.join(os.path.dirname(__file__), "jsons", "AggregateToAtar.min.json")
+json_file = os.path.join(os.path.dirname(__file__), "jsons", "AggregateToAtar.json")
 
 years = {}
 
@@ -27,13 +28,7 @@ for filename in filesPath:
 
     years[filename[15:19]] = allowed_lines
 
-print(years)
-with open("jsons/AggregateToAtar.json", "w") as f:
-    json.dump(years, f, indent=4)
-with open("jsons/AggregateToAtar.min.json", "r") as f:
+with open(json_file_min, "w") as f:
     json.dump(years, f)
-
-with open(os.path.join(jsons_dir, "AggregateToAtar.min.json"), "w") as f:
+with open(json_file, "w") as f:
     json.dump(years, f, indent=4)
-with open("jsons/AggregateToAtar.min.json", "r") as f:
-    json.dump(years, f)

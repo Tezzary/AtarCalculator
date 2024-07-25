@@ -302,3 +302,15 @@ document.addEventListener("click", (event) => {
         dropdown.remove()
     }
 })
+
+function changeTheme(){
+    let body = document.body
+    if(body.classList.contains("dots")){
+        body.classList.remove("dots")
+        body.classList.add("grid")
+    }
+    else{
+        body.classList.remove("grid")
+        body.classList.add("dots")
+    }
+}

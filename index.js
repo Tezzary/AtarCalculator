@@ -282,7 +282,7 @@ function addAtarEstimateRow(){
     }
 
 }
-addStaticRow(["", "Raw Score", "2019 Scaled SS", "2020 Scaled SS", "2021 Scaled SS", "2022 Scaled SS", "2023 Scaled SS"])
+addStaticRow(["Subject", "Raw Score", "2019 Scaled SS", "2020 Scaled SS", "2021 Scaled SS", "2022 Scaled SS", "2023 Scaled SS"])
 for (let i = 0; i < 6; i++) {
     //first row is compulsory english so i==0 is true for first column
     addSubjectRow(i==0)

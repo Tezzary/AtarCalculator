@@ -11,14 +11,9 @@ html, body {
     font-weight: 700;
 }
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
     background-size: 3vh 3vh;
-
+    text-align: center;
     background-image:
-        
         linear-gradient(to right, rgba(128, 128, 128, 0.459) 1px, transparent 1px),
         linear-gradient(to bottom, rgba(128, 128, 128, 0.459) 1px, transparent 1px);
         
@@ -28,6 +23,7 @@ input {
 }
 img {
     width: 800px;
+    margin: auto;
 }
 #container {
     display: grid;
@@ -39,6 +35,7 @@ img {
     border-radius: 10px;
     box-shadow: #0003 0 2px 8px;
     border: 1px solid rgba(128, 128, 128, 0.459);
+    margin: auto;
 }
 .headerCells {
     background-color: #DDDDDD;

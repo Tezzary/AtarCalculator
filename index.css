@@ -2,13 +2,15 @@
     --dark-blue: #192646;
     --light-blue: #096dd2;
     --grid: rgba(128, 128, 128, 0.15);
+    --highlighter: rgba(143, 208, 100, 0.68);
 }
 
 html, body {
     height: 100%;
     margin: 0;
     padding: 0;
-    font-family: PT Sans, Trebuchet MS, Arial Narrow, sans-serif;
+    font-family: "Kalam", cursive;
+    /*font-family: "Tillana", system-ui;*/
     font-weight: 700;
 }
 
@@ -16,26 +18,41 @@ body {
     text-align: center;
     background-size: 3vh 3vh;    
 }
+
 .extras {
     position: fixed;
     top: 0;
     left: 0;
-    display: flex;
-    justify-content: space-between;
     margin: 10px;
+    display: flex;
+    flex-direction: column;
 }
+
 .grid {
     background-image:
-        linear-gradient(to right, var(--grid) 1px, transparent 1px),
-        linear-gradient(to bottom, var(--grid) 1px, transparent 1px);
+        linear-gradient(to right, var(--grid) 2px, transparent 1px),
+        linear-gradient(to bottom, var(--grid) 2px, transparent 1px);
 }
+
 .dots {
     background-size: 3vh 3vh;
     background-image: radial-gradient(circle, var(--grid) 2px, #FFFFFF  1px);
 }
 
+.adjustmentFactor {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+input[type="text"], input[type="number"] {
+    font-family: "Kalam", cursive;
+    border: 2px solid var(--highlighter);
+    border-radius: 10px;
+}
 input {
     font-weight: 700;
+    
 }
 img {
     width: 800px;
@@ -49,12 +66,18 @@ img {
     width: 1200px;
     padding: 10px;
     border-radius: 10px;
+    /*
     box-shadow: #0003 0 2px 8px;
-    border: 1px solid rgba(128, 128, 128, 0.459);
+    */
+    /*
+    border: 3px solid rgba(128, 128, 128, 0.459);
+    */
+    border: 3px solid var(--highlighter);
     margin: auto;
 }
 .headerCells {
-    background-color: #DDDDDD;
+    color: var(--highlighter);
+    font-size: 20px;
     padding: 0;
     margin: 0 !important;
 }
@@ -65,6 +88,8 @@ img {
     overflow: scroll;
     background-color: white;
     box-shadow: #0003 0 2px 8px;
+    border: var(--highlighter) 3px solid;
+    border-radius: 10px;
 }
 .dropdown > div{
     cursor: pointer;

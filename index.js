@@ -16,6 +16,9 @@ let aggregateRowCells = []
 let atarRowCells = []
 
 let startingYear = 2019
+
+let adjustmentFactor = 0
+
 class Subject{
     constructor(compulsoryEnglish=false){
         this.cells = []
@@ -111,7 +114,7 @@ function populatePage(){
                     let offset = subjectObj.rawScore - baseline[j - 1]
                     let diff = baseline[j] - baseline[j - 1]
                     let percent = offset / diff
-                    console.log(percent)
+                    //console.log(percent)
                     let scaledSS = subject.subjectScalingData[j - 1] + percent * (subject.subjectScalingData[j] - subject.subjectScalingData[j - 1])
                     if (scaledSS < 0){
                         scaledSS = 0
@@ -142,15 +145,31 @@ function populatePage(){
         //sorts ascending which we want descending so we do b - a
         scaledStudyScores.sort((a, b) => b - a)
         fullStudyScoresCounted = 1
+
+        let adjustmentFactorUsed = false
+
         for(let j = 0; j < scaledStudyScores.length; j++){
-            if(fullStudyScoresCounted == 4){
-                sum += scaledStudyScores[j] / 10
+            if(fullStudyScoresCounted == 4 && fullStudyScoresCounted < 5){
+                if (adjustmentFactor > scaledStudyScores[j] / 10 && !adjustmentFactorUsed && j == 4) {
+                    sum += adjustmentFactor
+                    adjustmentFactorUsed = true
+                    fullStudyScoresCounted += 1
+                }
+                else {
+                    sum += scaledStudyScores[j] / 10
+                }
             }
             else{
                 sum += scaledStudyScores[j]
                 fullStudyScoresCounted += 1
             }
         }
+        if (scaledStudyScores.length < 5) {
+            console.log("yep")
+            sum += adjustmentFactor
+        }
+        console.log(adjustmentFactor)
+        console.log(typeof adjustmentFactor)
         cell.innerText = sum.toFixed(2)
 
         cell = atarRowCells[i]
@@ -159,7 +178,7 @@ function populatePage(){
         let incrementsPassed = -1
         for(let j = 0; j < aggregateToAtar[year].length; j++){
             let minimumRequired = aggregateToAtar[year][aggregateToAtar[year].length - 1 - j]
-            console.log(minimumRequired, sum)
+            //console.log(minimumRequired, sum)
             if(parseFloat(minimumRequired) <= sum){
                 incrementsPassed = j
             }
@@ -259,6 +278,9 @@ function addAggregateRow(){
     for(let i = 0; i < elementsPerRow; i++){
         let cell = document.createElement("div")
         cell.classList.add("cell")
+        if (i == 0){
+            cell.innerText = "Adjustment Factor"
+        }
         if(i==1){
             cell.innerText = "Aggregate"
         }
@@ -272,6 +294,34 @@ function addAtarEstimateRow(){
     for(let i = 0; i < elementsPerRow; i++){
         let cell = document.createElement("div")
         cell.classList.add("cell")
+        if (i == 0){
+            let div = document.createElement("div")
+            div.className = "adjustmentFactor"
+
+            let adjustmentFactorText = document.createElement("span")
+            adjustmentFactorText.innerText = 0
+            
+
+            let rangeField = document.createElement("input")
+            rangeField.type = "range"
+            rangeField.min = 0
+            rangeField.max = 5
+            rangeField.value = 0
+            rangeField.step = 0.5
+            rangeField.addEventListener("input", (event) => {
+                //adjustment factor to number
+                adjustmentFactor = parseFloat(event.target.value)
+                adjustmentFactorText.innerText = adjustmentFactor
+                populatePage()
+            })
+
+
+
+            cell.appendChild(div)
+            div.appendChild(rangeField)
+            div.appendChild(adjustmentFactorText)
+
+        }
         if(i==1){
             cell.innerText = "ATAR"
         }

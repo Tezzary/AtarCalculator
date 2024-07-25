@@ -165,11 +165,8 @@ function populatePage(){
             }
         }
         if (scaledStudyScores.length < 5) {
-            console.log("yep")
             sum += adjustmentFactor
         }
-        console.log(adjustmentFactor)
-        console.log(typeof adjustmentFactor)
         cell.innerText = sum.toFixed(2)
 
         cell = atarRowCells[i]
@@ -178,7 +175,6 @@ function populatePage(){
         let incrementsPassed = -1
         for(let j = 0; j < aggregateToAtar[year].length; j++){
             let minimumRequired = aggregateToAtar[year][aggregateToAtar[year].length - 1 - j]
-            //console.log(minimumRequired, sum)
             if(parseFloat(minimumRequired) <= sum){
                 incrementsPassed = j
             }
@@ -282,6 +278,7 @@ function addAggregateRow(){
             cell.innerText = "Adjustment Factor"
         }
         if(i==1){
+            cell.classList.add("headerCells")
             cell.innerText = "Aggregate"
         }
         container.appendChild(cell)
@@ -323,6 +320,7 @@ function addAtarEstimateRow(){
 
         }
         if(i==1){
+            cell.classList.add("headerCells")
             cell.innerText = "ATAR"
         }
         container.appendChild(cell)

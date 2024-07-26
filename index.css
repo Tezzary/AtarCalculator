@@ -1,7 +1,7 @@
 :root {
     --dark-blue: #192646;
     --light-blue: #096dd2;
-    --grid: rgba(128, 128, 128, 0.15);
+    --grid: rgba(128, 128, 128, 0.25);
     --highlighter: rgba(143, 208, 100, 0.68);
 }
 

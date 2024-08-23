@@ -4,12 +4,14 @@
     --grid: rgba(128, 128, 128, 0.25);
     --highlighter: rgba(143, 208, 100, 0.68);
 }
-
+* {
+    font-family: "Playpen Sans", cursive;
+}
 html, body {
     height: 100%;
     margin: 0;
     padding: 0;
-    font-family: "Kalam", cursive;
+    /*font-family: "Kalam", cursive;*/
     /*font-family: "Tillana", system-ui;*/
     font-weight: 700;
 }
@@ -46,7 +48,7 @@ body {
 }
 
 input[type="text"], input[type="number"] {
-    font-family: "Kalam", cursive;
+    /*font-family: "Kalam", cursive;*/
     border: 2px solid var(--highlighter);
     border-radius: 10px;
 }

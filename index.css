@@ -103,7 +103,16 @@ img {
     margin: 5px;
 }
 
-
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--highlighter);
+    font-size: 20px;
+}
+footer a {
+    color: var(--highlighter);
+}
 
 /* Input Switch https://www.w3schools.com/howto/howto_css_switch.asp*/
 

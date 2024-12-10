@@ -18,7 +18,7 @@ sudo systemctl enable docker
 #https://mindsers.blog/en/post/https-using-nginx-certbot-docker/
 #copy the nginx conf file
 
-docker run -it --restart=always -p 80:80 --name web -v ~/AtarCalculator:/var/www/vceatarcalculator.com -v ~/AtarCalculator/nginx.conf:/etc/nginx/conf.d/vceatarcalculator.com -v /etc/letsencrypt:/etc/letsencrypt:ro nginx
+docker run -it --restart=always -p 80:80 --name web -v ~/AtarCalculator:/var/www/vceatarcalculator.com -v ~/AtarCalculator/nginx.conf:/etc/nginx/conf.d/site.conf -v /etc/letsencrypt/live:/etc/letsencrypt:ro nginx
 cp ~/AtarCalculator/* /usr/share/nginx/html/
 
 sudo 

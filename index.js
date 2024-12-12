@@ -15,7 +15,7 @@ let subjects = []
 let aggregateRowCells = []
 let atarRowCells = []
 
-let startingYear = 2019
+let startingYear = 2020
 
 let adjustmentFactor = 0
 
@@ -28,7 +28,7 @@ class Subject{
     }
 }
 function getValidSubjects(textFilter, englishOnly=false){
-    let yearSubjects = scalingReport["2023"]
+    let yearSubjects = scalingReport["2024"]
 
     let validSubjects = []
     for(let i = 0; i < yearSubjects.length; i++){
@@ -330,7 +330,7 @@ function addAtarEstimateRow(){
     }
 
 }
-addStaticRow(["Subject", "Raw Score", "2019 Scaled SS", "2020 Scaled SS", "2021 Scaled SS", "2022 Scaled SS", "2023 Scaled SS"])
+addStaticRow(["Subject", "Raw Score", "2020 Scaled SS", "2021 Scaled SS", "2022 Scaled SS", "2023 Scaled SS", "2024 Scaled SS"])
 for (let i = 0; i < 6; i++) {
     //first row is compulsory english so i==0 is true for first column
     addSubjectRow(i==0)

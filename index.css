@@ -63,7 +63,7 @@ img {
 #container {
     display: grid;
     gap: 0;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
     background-color: white;
     width: 1300px;
     padding: 10px;

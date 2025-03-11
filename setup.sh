@@ -22,3 +22,13 @@ docker run -it --restart=always -d -p 80:80 -p 443:443 --name web -v ~/AtarCalcu
 cp ~/AtarCalculator/* /usr/share/nginx/html/
 
 sudo 
+
+
+################ RENEW CERTIFICATE ################
+
+docker stop web
+docker rm web
+sudo certbot renew #maybe idk
+sudo certbot certonly --standalone #maybe idk if above doesnt work
+docker run -it --restart=always -d -p 80:80 -p 443:443 --name web -v ~/AtarCalculator:/var/www/vceatarcalculator.com -v ~/AtarCalculator/nginx.conf:/etc/nginx/conf.d/site.conf -v /etc/letsencrypt:/etc/letsencrypt:ro nginx
+cp ~/AtarCalculator/* /usr/share/nginx/html/

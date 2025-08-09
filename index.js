@@ -88,11 +88,15 @@ function handleTyping(text, input, subjectObj){
     }
 }
 function populatePage(){
+    localStorage.clear()
+    localStorage.setItem("adjustmentFactor", adjustmentFactor)
     for(let k = 0; k < subjects.length; k++){
         let subjectObj = subjects[k]
         if(subjectObj.subject == undefined){
             continue
         }
+        localStorage.setItem(`subjectName_${k}`, subjectObj.subject.subjectName)
+        localStorage.setItem(`rawScore_${k}`, subjectObj.rawScore)
         subjectObj.scaledSS = []
         for(let i = 2; i < subjectObj.cells.length; i++){
             let cell = subjectObj.cells[i]
@@ -206,12 +210,27 @@ function handleTextActivation(event, subjectObj){
         })
     }
 }
-function createSubjectCell(columnIndex, cell, subjectObj){
+function getSubjectWithName(subjectName){
+    let allSubjects = getValidSubjects("")
+    for(let i = 0; i < allSubjects.length; i++){
+        let s = allSubjects[i]
+        if(s.subjectName === subjectName){
+            return s
+        }
+    }
+    return null
+}
+
+function createSubjectCell(columnIndex, cell, subjectObj, rowNum){
     switch (columnIndex){
         //add subject selector
         case 0:
             let input = document.createElement("input")
             input.type = "text"
+            if(localStorage.getItem(`subjectName_${rowNum}`)){
+                input.value = localStorage.getItem(`subjectName_${rowNum}`)
+            }
+            subjectObj.subject = getSubjectWithName(input.value)
             input.addEventListener("click", (event) => {
                 handleTextActivation(event, subjectObj)
             })
@@ -228,6 +247,10 @@ function createSubjectCell(columnIndex, cell, subjectObj){
             rangeField.min = 0
             rangeField.max = 50
             rangeField.value = 30
+            if(localStorage.getItem(`rawScore_${rowNum}`)){
+                rangeField.value = localStorage.getItem(`rawScore_${rowNum}`)
+            }
+            subjectObj.rawScore = rangeField.value
             rangeField.addEventListener("input", (event) => {
                 subjectObj.rawScore = event.target.value
                 if(subjectObj.rawScore == ""){
@@ -243,7 +266,7 @@ function createSubjectCell(columnIndex, cell, subjectObj){
     }
 
 }
-function addSubjectRow(compulsoryEnglish){
+function addSubjectRow(compulsoryEnglish, rowNum){
     //let row = document.createElement("div")
     //row.classList.add("row")
     rows.push([])
@@ -252,7 +275,7 @@ function addSubjectRow(compulsoryEnglish){
     for (let i = 0; i < elementsPerRow; i++) {
         
         let cell = document.createElement("div")
-        createSubjectCell(i, cell, subjectObj)
+        createSubjectCell(i, cell, subjectObj, rowNum)
         rows[rows.length-1].push(cell)
         cell.classList.add("cell")
         container.appendChild(cell)
@@ -297,13 +320,21 @@ function addAtarEstimateRow(){
 
             let adjustmentFactorText = document.createElement("span")
             adjustmentFactorText.innerText = 0
-            
+            if(localStorage.getItem("adjustmentFactor")){
+                adjustmentFactorText.innerText = localStorage.getItem("adjustmentFactor")
+            }
 
             let rangeField = document.createElement("input")
             rangeField.type = "range"
             rangeField.min = 0
             rangeField.max = 5
             rangeField.value = 0
+
+            if(localStorage.getItem("adjustmentFactor")){
+                rangeField.value = localStorage.getItem("adjustmentFactor")
+            }
+            adjustmentFactor = parseFloat(rangeField.value)
+
             rangeField.step = 0.5
             rangeField.addEventListener("input", (event) => {
                 //adjustment factor to number
@@ -330,21 +361,31 @@ function addAtarEstimateRow(){
     }
 
 }
-addStaticRow(["Subject", "Raw Score", "2020 Scaled SS", "2021 Scaled SS", "2022 Scaled SS", "2023 Scaled SS", "2024 Scaled SS"])
-for (let i = 0; i < 6; i++) {
-    //first row is compulsory english so i==0 is true for first column
-    addSubjectRow(i==0)
+function resetCalculator(){
+    localStorage.clear();
+    location.reload();
 }
-addAggregateRow()
-addAtarEstimateRow()
+async function setup() {
+    addStaticRow(["Subject", "Raw Score", "2020 Scaled SS", "2021 Scaled SS", "2022 Scaled SS", "2023 Scaled SS", "2024 Scaled SS"])
 
-fetch("jsons/ScalingReport.min.json").then((response) => response.json()).then((data) => {
-    scalingReport = data
-})
-fetch("jsons/AggregateToAtar.min.json").then((response) => response.json()).then((data) => {
-    aggregateToAtar = data
-})
+    const [scalingReportData, aggregateToAtarData] = await Promise.all([
+        fetch("jsons/ScalingReport.min.json").then(res => res.json()),
+        fetch("jsons/AggregateToAtar.min.json").then(res => res.json())
+    ]);
 
+    scalingReport = scalingReportData;
+    aggregateToAtar = aggregateToAtarData;
+
+    for (let i = 0; i < 6; i++) {
+        //first row is compulsory english so i==0 is true for first column
+        addSubjectRow(i==0, i)
+    }
+    addAggregateRow()
+    addAtarEstimateRow()
+    populatePage()
+}
+
+setup()
 document.addEventListener("click", (event) => {
     if(dropdown && event.target.parentElement != dropdown.parentElement){
         dropdown.remove()

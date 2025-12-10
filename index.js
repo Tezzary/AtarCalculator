@@ -15,7 +15,7 @@ let subjects = []
 let aggregateRowCells = []
 let atarRowCells = []
 
-let startingYear = 2020
+let startingYear = 2021
 
 let adjustmentFactor = 0
 
@@ -366,7 +366,7 @@ function resetCalculator(){
     location.reload();
 }
 async function setup() {
-    addStaticRow(["Subject", "Raw Score", "2020 Scaled SS", "2021 Scaled SS", "2022 Scaled SS", "2023 Scaled SS", "2024 Scaled SS"])
+    addStaticRow(["Subject", "Raw Score", "2021 Scaled SS", "2022 Scaled SS", "2023 Scaled SS", "2024 Scaled SS", "2025 Scaled SS"])
 
     const [scalingReportData, aggregateToAtarData] = await Promise.all([
         fetch("jsons/ScalingReport.min.json").then(res => res.json()),
